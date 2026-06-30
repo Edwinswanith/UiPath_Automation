@@ -1,0 +1,11 @@
+========================================
+VENDOR INVOICE
+========================================
+Invoice Number : INV-2001
+Vendor Name    : Metro Components
+Vendor ID      : VEN-103
+PO Number      : PO-1003
+Invoice Amount : 100,000.00
+Bank Account   : XXXXXX5566
+----------------------------------------
+Standard order.

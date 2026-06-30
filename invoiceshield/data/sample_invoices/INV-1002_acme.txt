@@ -1,0 +1,11 @@
+========================================
+VENDOR INVOICE
+========================================
+Invoice Number : INV-1002
+Vendor Name    : Acme Supplies Pvt Ltd
+Vendor ID      : VEN-104
+PO Number      : PO-1002
+Invoice Amount : 225,000.00
+Bank Account   : XXXXXX7781
+----------------------------------------
+Submitted via vendor portal.

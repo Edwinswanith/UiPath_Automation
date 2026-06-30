@@ -1,0 +1,5 @@
+invoiceNumber,vendorId,vendorName,poNumber,invoiceAmount,invoiceBankAccount
+INV-1001,VEN-101,Northstar Office Supplies,PO-1001,50000,1122
+INV-1002,VEN-104,Acme Supplies Pvt Ltd,PO-1002,225000,7781
+INV-1003,VEN-103,Metro Components,PO-1003,108000,5566
+INV-1005,VEN-105,Pinnacle Trading Co,PO-1005,49500,4407

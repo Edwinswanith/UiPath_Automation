@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AuditSummaryAgentOutput",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["auditSummary", "auditCompleteness", "missingAuditFields"],
+  "properties": {
+    "auditSummary": { "type": "string", "minLength": 1, "maxLength": 1200 },
+    "auditCompleteness": { "type": "string", "enum": ["Complete", "Incomplete"] },
+    "missingAuditFields": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  }
+}

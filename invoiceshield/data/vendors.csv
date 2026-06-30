@@ -1,0 +1,8 @@
+vendorId,vendorName,approvedBankAccount,taxId,riskStatus,tenureDays,bankChangeDays
+VEN-101,Northstar Office Supplies,1122,GST-101,Normal,1800,
+VEN-102,BluePeak Logistics,3344,GST-102,Normal,1200,
+VEN-103,Metro Components,5566,GST-103,Normal,2000,
+VEN-104,Acme Supplies Pvt Ltd,5529,GST-104,HighReview,900,
+VEN-105,Pinnacle Trading Co,4407,GST-105,Normal,12,
+VEN-107,Apex New Vendor LLC,7788,GST-107,Normal,20,
+VEN-108,Harbor Freight Partners,8810,GST-108,Normal,1600,4

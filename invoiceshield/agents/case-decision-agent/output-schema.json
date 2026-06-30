@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CaseDecisionAgentOutput",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "issueType",
+    "riskScore",
+    "recommendedAction",
+    "recommendedStage",
+    "humanReviewRequired",
+    "confidence",
+    "evidenceSummary"
+  ],
+  "properties": {
+    "issueType": {
+      "type": "string",
+      "enum": [
+        "BANK_MISMATCH",
+        "DUPLICATE",
+        "AMOUNT_VARIANCE",
+        "MISSING_GOODS_RECEIPT",
+        "MISSING_EVIDENCE",
+        "COMPOSITE_RISK",
+        "NO_EXCEPTION"
+      ]
+    },
+    "riskScore": { "type": "integer", "minimum": 0, "maximum": 100 },
+    "recommendedAction": {
+      "type": "string",
+      "enum": [
+        "HOLD_AND_ESCALATE",
+        "HUMAN_REVIEW",
+        "PROCUREMENT_REVIEW",
+        "REQUEST_CLARIFICATION",
+        "NONE"
+      ]
+    },
+    "recommendedStage": {
+      "type": "string",
+      "enum": [
+        "Human Decision",
+        "Finance Escalation",
+        "Vendor Clarification",
+        "Procurement Review",
+        "Resolution"
+      ]
+    },
+    "humanReviewRequired": { "type": "boolean" },
+    "confidence": { "type": "string", "enum": ["High", "Medium", "Low"] },
+    "evidenceSummary": { "type": "string", "minLength": 1, "maxLength": 600 }
+  }
+}

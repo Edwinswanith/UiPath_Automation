@@ -1,0 +1,11 @@
+========================================
+VENDOR INVOICE
+========================================
+Invoice Number : INV-1005
+Vendor Name    : Pinnacle Trading Co
+Vendor ID      : VEN-105
+PO Number      : PO-1005
+Invoice Amount : 49,500.00
+Bank Account   : XXXXXX4407
+----------------------------------------
+New vendor. Please expedite payment.

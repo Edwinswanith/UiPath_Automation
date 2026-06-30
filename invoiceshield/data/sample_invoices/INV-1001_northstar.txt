@@ -1,0 +1,11 @@
+========================================
+VENDOR INVOICE
+========================================
+Invoice Number : INV-1001
+Vendor Name    : Northstar Office Supplies
+Vendor ID      : VEN-101
+PO Number      : PO-1001
+Invoice Amount : 50,000.00
+Bank Account   : XXXXXX1122
+----------------------------------------
+Monthly supplies.

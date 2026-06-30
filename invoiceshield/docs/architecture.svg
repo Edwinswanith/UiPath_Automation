@@ -1,0 +1,68 @@
+<svg viewBox="0 0 840 440" xmlns="http://www.w3.org/2000/svg" role="img" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif">
+  <title>InvoiceShield architecture: agents recommend, rules route, a human decides, a guardrail blocks the payment</title>
+  <desc>A risky invoice enters an Investigate stage where two AI agents gather evidence and score risk; deterministic rules route it; a finance human decides in a live cloud app; a guardrailed Resolve and Close stage writes a mock ERP only after human approval while an audit agent logs it; a Vendor Clarification loop returns cases for re-checking.</desc>
+  <defs>
+    <marker id="ag" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L7,3 L0,6 Z" fill="#98a2b3"/></marker>
+    <marker id="ab" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L7,3 L0,6 Z" fill="#2563eb"/></marker>
+  </defs>
+
+  <rect width="840" height="440" fill="#ffffff"/>
+
+  <!-- legend -->
+  <circle cx="556" cy="22" r="5" fill="none" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="566" y="26" font-size="11" fill="#667085">AI agent</text>
+  <circle cx="638" cy="22" r="5" fill="none" stroke="#101828" stroke-width="1.5"/>
+  <text x="648" y="26" font-size="11" fill="#667085">human / guardrail</text>
+
+  <!-- input -->
+  <rect x="14" y="118" width="150" height="86" rx="10" fill="none" stroke="#d0d5dd" stroke-width="1.5"/>
+  <text x="89" y="150" text-anchor="middle" font-size="13" font-weight="700" fill="#101828">Risky invoice in</text>
+  <text x="89" y="170" text-anchor="middle" font-size="10" fill="#667085">bank change, duplicate,</text>
+  <text x="89" y="184" text-anchor="middle" font-size="10" fill="#667085">PO gap, no goods receipt</text>
+  <line x1="164" y1="161" x2="186" y2="161" stroke="#98a2b3" stroke-width="1.5" marker-end="url(#ag)"/>
+
+  <!-- Stage 1 -->
+  <rect x="190" y="46" width="190" height="250" rx="12" fill="none" stroke="#d0d5dd" stroke-width="1.5"/>
+  <text x="285" y="72" text-anchor="middle" font-size="13" font-weight="700" fill="#101828">1 · INVESTIGATE</text>
+  <text x="285" y="91" text-anchor="middle" font-size="11" fill="#667085">Agents gather + score</text>
+  <rect x="202" y="104" width="166" height="40" rx="8" fill="none" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="285" y="123" text-anchor="middle" font-size="11" font-weight="600" fill="#2563eb">Deep Investigation Agent</text>
+  <text x="285" y="137" text-anchor="middle" font-size="9" fill="#98a2b3">coded · LangGraph · tools</text>
+  <rect x="202" y="152" width="166" height="40" rx="8" fill="none" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="285" y="171" text-anchor="middle" font-size="11" font-weight="600" fill="#2563eb">Case Decision Agent</text>
+  <text x="285" y="185" text-anchor="middle" font-size="9" fill="#98a2b3">low-code · scores risk</text>
+  <text x="285" y="232" text-anchor="middle" font-size="10" fill="#667085">Deterministic rules route.</text>
+  <text x="285" y="248" text-anchor="middle" font-size="10" fill="#667085">Clean invoice = no case.</text>
+  <line x1="380" y1="120" x2="408" y2="120" stroke="#98a2b3" stroke-width="1.5" marker-end="url(#ag)"/>
+
+  <!-- Stage 2 -->
+  <rect x="412" y="46" width="190" height="250" rx="12" fill="none" stroke="#d0d5dd" stroke-width="1.5"/>
+  <text x="507" y="72" text-anchor="middle" font-size="13" font-weight="700" fill="#101828">2 · HUMAN DECISION</text>
+  <text x="507" y="91" text-anchor="middle" font-size="11" fill="#667085">Finance owns the money call</text>
+  <rect x="424" y="108" width="166" height="46" rx="8" fill="none" stroke="#101828" stroke-width="1.5"/>
+  <text x="507" y="130" text-anchor="middle" font-size="12" font-weight="700" fill="#101828">Finance reviewer</text>
+  <text x="507" y="146" text-anchor="middle" font-size="9" fill="#98a2b3">human-in-the-loop</text>
+  <text x="507" y="196" text-anchor="middle" font-size="10" fill="#667085">Approve / Reject in a</text>
+  <text x="507" y="212" text-anchor="middle" font-size="10" fill="#667085">LIVE app on Automation Cloud</text>
+  <line x1="602" y1="120" x2="628" y2="120" stroke="#98a2b3" stroke-width="1.5" marker-end="url(#ag)"/>
+
+  <!-- Stage 3 -->
+  <rect x="632" y="46" width="190" height="250" rx="12" fill="none" stroke="#d0d5dd" stroke-width="1.5"/>
+  <text x="727" y="72" text-anchor="middle" font-size="13" font-weight="700" fill="#101828">3 · RESOLVE &amp; CLOSE</text>
+  <rect x="644" y="92" width="166" height="46" rx="8" fill="none" stroke="#101828" stroke-width="2.5"/>
+  <text x="727" y="113" text-anchor="middle" font-size="11" font-weight="700" fill="#101828">GUARDRAIL</text>
+  <text x="727" y="129" text-anchor="middle" font-size="9" fill="#98a2b3">no payment until human OK</text>
+  <rect x="644" y="150" width="166" height="40" rx="8" fill="none" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="727" y="169" text-anchor="middle" font-size="11" font-weight="600" fill="#2563eb">Audit Summary Agent</text>
+  <text x="727" y="183" text-anchor="middle" font-size="9" fill="#98a2b3">low-code · logs the case</text>
+  <text x="727" y="230" text-anchor="middle" font-size="10" fill="#667085">Write mock ERP + audit.</text>
+  <text x="727" y="246" text-anchor="middle" font-size="10" fill="#667085">Case closed with full trail.</text>
+
+  <!-- loop -->
+  <path d="M507,296 L507,330 Q507,338 499,338 L293,338 Q285,338 285,330 L285,300" fill="none" stroke="#2563eb" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#ab)"/>
+  <text x="396" y="356" text-anchor="middle" font-size="10" font-weight="600" fill="#2563eb">Vendor Clarification loop · re-check &amp; return</text>
+
+  <!-- caption -->
+  <text x="420" y="400" text-anchor="middle" font-size="12" font-weight="700" fill="#101828">Agents recommend. Rules route. A human decides.</text>
+  <text x="420" y="420" text-anchor="middle" font-size="11" fill="#667085">The guardrail blocks the payment until a human signs off. The AI never moves money.</text>
+</svg>
